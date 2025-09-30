@@ -1,0 +1,11 @@
+DROP TABLE IF EXISTS `face`;
+CREATE TABLE `face` (
+  `rec_id` INT NOT NULL AUTO_INCREMENT,
+  `user_id` INT NULL DEFAULT NULL,
+  `embedding_path` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '该次采集的人脸向量文件路径',
+  `rec_time` DATETIME NULL DEFAULT NULL COMMENT '识别时间',
+  `result` VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT NULL COMMENT '识别结果，如成功，失败，异常',
+  PRIMARY KEY (`rec_id`) USING BTREE,
+  INDEX `face_user`(`user_id` ASC) USING BTREE,
+  CONSTRAINT `face_user` FOREIGN KEY (`user_id`) REFERENCES `user` (`user_id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=Dynamic;

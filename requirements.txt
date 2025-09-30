@@ -1,0 +1,10 @@
+Flask==2.3.2
+Flask-SQLAlchemy==3.0.5
+Flask-CORS==4.0.0
+Flask-Bcrypt==1.0.1
+Flask-JWT-Extended==4.5.2
+PyMySQL==1.1.0
+insightface==0.7.3
+opencv-python==4.8.1.78
+numpy==1.24.3
+onnxruntime==1.15.1
