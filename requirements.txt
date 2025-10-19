@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Flask==2.3.2
 Flask-SQLAlchemy==3.0.5
 Flask-CORS==4.0.0
@@ -9,3 +10,11 @@ opencv-python==4.8.1.78
 numpy==1.24.3
 onnxruntime==1.15.1
 
+=======
+Flask==3.1.2
+Flask_Bcrypt==1.0.1
+flask_cors==6.0.1
+Flask_JWT_Extended==4.7.1
+flask_sqlalchemy==3.1.1
+pytz==2025.2
+>>>>>>> upstream/main

@@ -3,8 +3,13 @@ from datetime import datetime, timezone
 
 class User(db.Model):
     __tablename__ = 'user'
+<<<<<<< HEAD
     user_id = db.Column(db.Integer, primary_key=True)
     account = db.Column(db.String(255), unique=True, nullable=False)
+=======
+    user_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
+    account = db.Column(db.String(255))
+>>>>>>> upstream/main
     name = db.Column(db.String(255))
     password = db.Column(db.String(255))
     role = db.Column(db.String(255), default='员工')
@@ -15,7 +20,7 @@ class User(db.Model):
 
 class Face(db.Model):
     __tablename__ = 'face'
-    rec_id = db.Column(db.Integer, primary_key=True)
+    rec_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.user_id', ondelete='CASCADE', onupdate='CASCADE'))
     embedding_path = db.Column(db.String(255))
     rec_time = db.Column(db.DateTime, default=lambda: datetime.now(timezone.utc))
@@ -23,7 +28,7 @@ class Face(db.Model):
 
 class Attendance(db.Model):
     __tablename__ = 'attendance'
-    attendance_id = db.Column(db.Integer, primary_key=True)
+    attendance_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey('user.user_id', ondelete='CASCADE', onupdate='CASCADE'))
     clock_in_time = db.Column(db.DateTime)
     clock_out_time = db.Column(db.DateTime)

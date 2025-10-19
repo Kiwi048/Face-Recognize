@@ -23,6 +23,7 @@ SET FOREIGN_KEY_CHECKS = 0;
 DROP TABLE IF EXISTS `attendance`;
 CREATE TABLE `attendance`  (
 <<<<<<< HEAD
+<<<<<<< HEAD
   `attendance_id` int NOT NULL AUTO_INCREMENT, 
   `user_id` int NULL DEFAULT NULL,
   `clock_in_time` datetime NULL DEFAULT NULL COMMENT '上班时间',
@@ -31,6 +32,9 @@ CREATE TABLE `attendance`  (
   `clock_out_status` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NULL DEFAULT '正常' COMMENT '签退状态，如正常，早退',
 =======
   `attendance_id` int NOT NULL,
+=======
+  `attendance_id` int NOT NULL AUTO_INCREMENT,
+>>>>>>> upstream/main
   `user_id` int NULL DEFAULT NULL,
   `clock_in_time` datetime NULL DEFAULT NULL COMMENT '上班时间',
   `clock_out_time` datetime NULL DEFAULT NULL COMMENT '下班时间',
